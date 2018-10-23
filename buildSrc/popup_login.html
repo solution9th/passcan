@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PASSCAN</title>
+    <link rel="stylesheet" href="./mdl/material.min.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_758596_fqntpc4m7k5.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"/>
+    <link rel="stylesheet" href="./style/popup.css">
+</head>
+<body>
+<div class="popup-container">
+    <div class="panel-config">
+        <div class="head">
+            <span>域名设置</span>
+        </div>
+        <div class="main" style="padding-top: 20px;">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="passcanHost">
+                <label class="mdl-textfield__label" for="passcanHost">Passcan API地址</label>
+            </div>
+            <div class="exp">例如: https://passcan.util.solution9.net</div>
+            <button id="setHost" class="fullwidth-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                确 认
+            </button>
+        </div>
+    </div>
+    <div class="panel-main">
+        <div class="head">
+            <span>Passcan</span>
+            <button id="toSetting" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="iconfont icon-settings-cogwheel-bu"></i>
+            </button>
+        </div>
+        <div class="main">
+            <div class="curApi"></div>
+            <button id="loginButton"
+                    class="fullwidth-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                登录
+            </button>
+        </div>
+    </div>
+    <div class="panel-setting">
+        <div class="head">
+            <button id="backToMain" class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="iconfont icon-arrow-right-copy"></i>
+            </button>
+            <span>Passcan</span>
+            <div class="emt"></div>
+        </div>
+        <div class="set-main">
+            <ul class="config">
+                <li>
+                    <label>Passcan 域名</label>
+                    <div class="v">
+                        <input type="text" class="input-active passcan-api" value="i1.solution9.net"/>
+                        <button class="edit-domain mdl-button mdl-js-button mdl-button--icon">
+                            <i class="iconfont icon-create-new-pencil-bu"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="msg-toast" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+</div>
+</body>
+<script rel="script" src="./mdl/material.min.js"></script>
+<script rel="script" src="./js/popup.js"></script>
+</html>

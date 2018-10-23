@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>passcanConsole</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_758596_nfvhndb4c2m.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+    <link rel="stylesheet" href="./style/console.css">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/ilbddbbikgbfohimdbkegcminkeagpao">
+</head>
+<body>
+<div class="head">
+    <div class="logo">
+        <img src="./lib/logo.svg">
+    </div>
+    <div class="ac">
+        <div></div>
+        <div class="bt">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                <i class="iconfont icon-baseline-extension-"></i>
+            </button>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                <i class="iconfont icon-user-account-box"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="main guide-main">
+    <div class="guide-panel" style="display: flex">
+        <img src="./image/guide-logo.png" class="logo">
+        <div class="wait">
+            <img src="./image/logo-wait.png" class="bg">
+            <div class="animate">
+                <img src="./image/star.png" class="dot">
+                <img src="./image/star.png" class="dot">
+                <img src="./image/star.png" class="dot">
+            </div>
+        </div>
+        <button id="install" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            安装 Chrome 浏览器插件
+        </button>
+        <div class="tip">你可以把难记的账号密码装进PassCan这个小工具，最重要的是你可以用它和团队同步密码，共享人无须知道密码就能快速登录！</div>
+    </div>
+    <div class="install-panel" style="display: none;">
+        <div class="step-1" style="display: none;">
+            <div class="step-icon">
+                <img src="./image/installArrow.png">
+            </div>
+            <div class="tip">使用「密码保存和填充助手」可以非常方便的保存，自动填充账号密码信息，是使用PassCan必不可少的助手</div>
+        </div>
+        <div class="step-2" style="display: none;">
+            <div class="step-icon">
+                <img src="./image/tip2.png">
+            </div>
+            <img class="txt" src="./image/txt.png">
+            <div class="tip">进行初始化设置</div>
+        </div>
+    </div>
+
+    <div class="local-guide-panel" style="display: none">
+        <img src="./image/guide-logo.png" class="logo">
+        <div class="wait">
+            <img src="./image/logo-wait.png" class="bg">
+            <div class="animate">
+                <img src="./image/star.png" class="dot">
+                <img src="./image/star.png" class="dot">
+                <img src="./image/star.png" class="dot">
+            </div>
+        </div>
+        <button id="localInstall" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+            本地下载
+        </button>
+        <div class="tip">你可以把难记的账号密码装进PassCan这个小工具，最重要的是你可以用它和团队同步密码，共享人无须知道密码就能快速登录！</div>
+    </div>
+    <div class="local-install-panel" style="display: none;">
+        <div class="step">
+            <div class="step-icon">
+                <img src="./image/localinstall.png">
+            </div>
+            <p>请按照上面步骤安装</p>
+            <div class="tip">使用「密码保存和填充助手」可以非常方便的保存，自动填充账号密码信息，是使用PassCan必不可少的助手</div>
+        </div>
+    </div>
+</div>
+</body>
+<script rel="script" src="./mdl/material.min.js"></script>
+<script rel="script" src="./js/guide.js"></script>
+</html>

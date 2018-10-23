@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>passcanConsole</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_758596_2jzb96t8cyp.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css" />
+    <link rel="stylesheet" href="./style/console.css">
+</head>
+<body>
+<div class="loading">
+    <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+</div>
+<dialog class="mdl-dialog delete-dialog">
+    <div class="title">是否删除该项?</div>
+    <div class="mdl-dialog__actions">
+        <button class="del-dialog-cancel mdl-button mdl-js-button mdl-js-ripple-effect">
+            取消
+        </button>
+        <button class="del-dialog-confirm mdl-button mdl-js-button mdl-js-ripple-effect">
+            确认
+        </button>
+    </div>
+</dialog>
+<dialog class="mdl-dialog panel-dialog">
+    <div class="add-panel">
+        <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+        <div class="container">
+            <div class="left">
+                <div class="filter">
+                    <div id="filterType" class="mdl-button mdl-js-button mdl-button--icon">
+                        用户
+                    </div>
+                    <div class="search">
+                        <input type="text" class="search-source" placeholder="搜索关键词">
+                        <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                            <i class="iconfont icon-sousuo"></i>
+                        </button>
+                    </div>
+                    <ul class="filterType-menu mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                        for="filterType">
+                        <li data-type="user" class="mdl-menu__item">用户</li>
+                        <li data-type="group" class="mdl-menu__item">组</li>
+                        <li data-type="role" class="mdl-menu__item">角色</li>
+                    </ul>
+                </div>
+                <ul class="allu-its">
+                    <!--<li>-->
+                        <!--<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="ucheck-0">-->
+                            <!--<input type="checkbox" id="ucheck-0" class="mdl-checkbox__input">-->
+                            <!--<span class="mdl-checkbox__label">王师</span>-->
+                        <!--</label>-->
+                        <!--<div class="u">wangshi@huanqiu.com</div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="right">
+                <div class="ad-nm">已选择<span>0</span>位用户</div>
+                <ul class="adu-its">
+                    <!--<li>-->
+                        <!--<div class="n"><i class="iconfont icon-yonghu"></i>王氏</div>-->
+                        <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;icon mdl-js-ripple-effect">-->
+                            <!--<i class="iconfont icon-shanchu"></i>-->
+                        <!--</button>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button class="adu-cancel mdl-button mdl-js-button mdl-js-ripple-effect">
+                取消
+            </button>
+            <button class="adu-confirm mdl-button mdl-js-button mdl-js-ripple-effect">
+                添加
+            </button>
+        </div>
+    </div>
+    <div class="mdl-dialog__content">
+        <div class="title"><i class="iconfont icon-baseline-vpn_key-p"></i><span class="dialog-title">http://www.google.cn</span></div>
+        <div class="tab-hd">
+            <div class="active mdl-button mdl-js-button mdl-js-ripple-effect">
+                基础信息
+            </div>
+            <div class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                查看权限
+            </div>
+            <div class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                管理权限
+            </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="form form-base-info">
+                        <div class="row">
+                            <label class="label">网站</label>
+                            <div class="ar">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="site" value="site">
+                                    <label class="mdl-textfield__label" for="site">例如http://www.google.com</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="label">用户名</label>
+                            <div class="ar">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="username" value="username">
+                                    <label class="mdl-textfield__label" for="username">输入用户名</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="label">密码</label>
+                            <div class="ar">
+                                <div class="pass-textfield mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="password" id="password" value="password">
+                                    <label class="mdl-textfield__label" for="password">输入密码</label>
+                                </div>
+                                <button class="togglePass mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--icon">
+                                    <i class="iconfont icon-visibility-button"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="label">备注</label>
+                            <div class="ar">
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" id="remark" value="remark">
+                                    <label class="mdl-textfield__label" for="remark">输入备注信息</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide read-panel">
+                    <div class="share">
+                        <div class="tip">可以查看本条信息。</div>
+                        <div class="add">
+                            <button id="addButton" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                                <i class="iconfont icon-jia"></i>
+                            </button>
+                            <button class="remove mdl-button mdl-js-button mdl-js-ripple-effect"><i class="iconfont icon-shanchu"></i>移除</button>
+                        </div>
+                        <ul class="u-its rd-u-its">
+                            <!--<li>-->
+                                <!--<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="ucheck-0">-->
+                                    <!--<input type="checkbox" id="ucheck-0" class="mdl-checkbox__input">-->
+                                    <!--<span class="mdl-checkbox__label">王师</span>-->
+                                <!--</label>-->
+                                <!--<div class="u">wangshi@huanqiu.com</div>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide admin-panel">
+                    <div class="share">
+                        <div class="tip">可以添加、移除共享本条信息的人员；可以查看、编辑、删除本条信息。</div>
+                        <div class="add">
+                            <button id="addButton2" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                                <i class="iconfont icon-jia"></i>
+                            </button>
+                            <button class="remove mdl-button mdl-js-button mdl-js-ripple-effect"><i class="iconfont icon-shanchu"></i>移除</button>
+                        </div>
+                        <ul class="u-its ad-u-its">
+                            <!--<li>-->
+                            <!--<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="ucheck-0">-->
+                            <!--<input type="checkbox" id="ucheck-0" class="mdl-checkbox__input">-->
+                            <!--<span class="mdl-checkbox__label">王师</span>-->
+                            <!--</label>-->
+                            <!--<div class="u">wangshi@huanqiu.com</div>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdl-dialog__actions">
+        <button class="dialog-cancel mdl-button mdl-js-button mdl-js-ripple-effect">
+            取消
+        </button>
+        <button class="dialog-confirm mdl-button mdl-js-button mdl-js-ripple-effect">
+            确认
+        </button>
+    </div>
+</dialog>
+<div class="head">
+    <div class="logo">
+        <img src="./lib/logo.svg">
+    </div>
+    <div class="ac">
+        <div class="search">
+            <input type="text" class="filter-webitem">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                <i class="iconfont icon-sousuo"></i>
+            </button>
+        </div>
+        <div class="bt">
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                <i class="iconfont icon-baseline-extension-"></i>
+            </button>
+            <button id="usermenu" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                <i class="iconfont icon-user-account-box"></i>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                for="usermenu">
+                <li data-type="user" class="mdl-menu__item loginout">退出登录</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="side">
+        <ul class="nav-list mdl-list">
+            <li class="nav-cur mdl-list__item mdl-button mdl-js-button mdl-js-ripple-effect">
+                <i class="iconfont icon-baseline-vpn_key-p"></i>
+                <span class="mdl-list__item-primary-content">
+                  密码管理
+                </span>
+            </li>
+            <li class="toInstall mdl-list__item mdl-button mdl-js-button mdl-js-ripple-effect">
+                <i class="iconfont icon-baseline-extension-"></i>
+                <span class="mdl-list__item-primary-content">
+                  浏览器插件
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="a-l">
+            <div class="add">
+                <button class="add-new-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect mdl-button--accent">
+                    添加
+                </button>
+            </div>
+            <div class="fl">
+                <label class="filter-item mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="filter">
+                    <input type="checkbox" id="filter" class="mdl-checkbox__input">
+                    <span class="mdl-checkbox__label">仅显示共享密码</span>
+                </label>
+            </div>
+        </div>
+        <div class="its">
+            <div class="hd">
+                <div class="td" style="width: 24.5%"><span>网站</span></div>
+                <div class="td" style="width: 22.5%"><span>用户名</span></div>
+                <div class="td" style="width: 20.5%"><span>备注</span></div>
+                <div class="td" style="width: 10%"><span>共享人</span></div>
+                <div class="td" style="width: 22.5%"><span>密码</span></div>
+            </div>
+            <div class="hb">
+            </div>
+        </div>
+    </div>
+    <div id="msg-toast" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+</div>
+</body>
+<script rel="script" src="./mdl/material.min.js"></script>
+<script rel="script" src="./js/console.js"></script>
+</html>
